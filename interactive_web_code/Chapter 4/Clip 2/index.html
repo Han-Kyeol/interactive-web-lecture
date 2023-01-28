@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <title>Fast Bank</title>
+</head>
+
+<body>
+  <div id="main-img-wrapper">
+    <img width="320" src="./Lovepik_com-401339128-data-management-data-analysis-icon-free-vector-illustration-mate.png"
+      alt="coding image">
+  </div>
+  <div id="intro-main">
+    <p>이미 모두의 은행, 패스트뱅크</p>
+    <p>함께 일해요.</p>
+    <p id="join-us-text">Join us!</p>
+    <img id="down-arrow-icon" src="./down-arrow.png" alt="down arrow icon">
+  </div>
+  <ul id="list-item-wrapper">
+    <li class="list-item">26주적금</li>
+    <li class="list-item">저금</li>
+    <li class="list-item">패스트캠퍼스</li>
+    <li class="list-item">떡볶이</li>
+    <li class="list-item">치킨</li>
+    <li class="list-item">축구</li>
+    <li class="list-item">축구선수</li>
+    <li class="list-item">마이너스통장대출</li>
+    <li class="list-item">26주적금</li>
+    <li class="list-item">저금</li>
+    <li class="list-item">패스트캠퍼스</li>
+    <li class="list-item">떡볶이</li>
+    <li class="list-item">치킨</li>
+    <li class="list-item">축구</li>
+    <li class="list-item">축구선수</li>
+    <li class="list-item">마이너스통장대출</li>
+    <li class="list-item">26주적금</li>
+    <li class="list-item">저금</li>
+    <li class="list-item">패스트캠퍼스</li>
+    <li class="list-item">떡볶이</li>
+    <li class="list-item">치킨</li>
+    <li class="list-item">축구</li>
+    <li class="list-item">축구선수</li>
+    <li class="list-item">마이너스통장대출</li>
+    <li class="list-item">26주적금</li>
+    <li class="list-item">저금</li>
+    <li class="list-item">패스트캠퍼스</li>
+    <li class="list-item">떡볶이</li>
+    <li class="list-item">치킨</li>
+    <li class="list-item">축구</li>
+    <li class="list-item">축구선수</li>
+    <li class="list-item">마이너스통장대출</li>
+  </ul>
+</body>
+
+<script>
+  const listStyleChangeStartY = 373
+  const listStyleChangeEndY = 1585
+
+  const listItems = document.querySelectorAll('.list-item')
+
+  const division = (listStyleChangeEndY - listStyleChangeStartY) / listItems.length
+
+  window.addEventListener("scroll", () => {
+    if (document.getElementById("on")) document.getElementById("on").removeAttribute("id")
+
+    if (window.scrollY > listStyleChangeStartY && window.scrollY < listStyleChangeEndY) {
+      const targetIndex = Math.floor((window.scrollY - listStyleChangeStartY) / division) // 영상의 round가 아닌 floor를 사용한 이유는, 반올림이 아니라 내림이 필요하기 때문입니다!
+
+      listItems[targetIndex].id = "on"
+    }
+  })
+</script>
+
+</html>

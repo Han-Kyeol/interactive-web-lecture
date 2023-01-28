@@ -1,0 +1,224 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+  cursor: none !important;
+  background-color: #1e4029;
+}
+
+.shown-area {
+  display: block;
+  opacity: 1;
+}
+
+.hidden-area {
+  display: none;
+  opacity: 0;
+}
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  pointer-events: none !important;
+}
+
+.cursor__default__inner {
+  position: absolute;
+  display:inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(10, 27, 16, 2.5);
+  border: 2px solid #d5a54e;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cursor__trace__inner {
+  position: absolute;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, .25);
+  transform: translate(-50%, -50%);
+  transition: all .04s ease;
+}
+
+.cursor--active .cursor__trace__inner {
+  transform: scale(0.5) translate(-100%, -100%);
+  transition: transform .3s ease;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(10);
+    opacity: 0;
+  }
+}
+
+.ripple {
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #d5a54e;
+  animation: ripple .5s ease-out;
+  animation-fill-mode: forwards;
+  z-index: -1;
+}
+
+.preloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #521714;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+.preloader__btn {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: none;
+  color: rgb(213, 165, 78);
+  background-color: rgb(30, 64, 41);
+  margin-top: -60px;
+  margin-left: -60px;
+}
+
+.preloader__btn_hold {
+  font-size: 19px;
+  line-height: 20px;
+  font-weight: 800;
+  letter-spacing: normal;
+}
+
+.header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.circle {
+  position: absolute;
+  display: inline-block;
+  width: 350px;
+  height: 350px;
+  border: 1px solid rgba(0, 0, 0, .4);
+  border-radius: 50%;
+}
+
+#circle-1 {
+  top: -100px;
+  left: -130px;
+}
+
+#circle-2 {
+  bottom: 5vh;
+  right: -230px;
+}
+
+.cube__image {
+  position: absolute;
+  opacity: .45;
+}
+
+#cube__image_1 {
+  top: 15%;
+  left: 15%;
+  width: 15%;
+}
+
+#cube__image_2 {
+  top: 55%;
+  left: 15%;
+  width: 20%;
+}
+
+#cube__image_3 {
+  top: 20%;
+  left: 70%;
+  width: 13%;
+}
+
+#cube__image_4 {
+  top: 60%;
+  left: 70%;
+  width: 20%;
+}
+
+.header__title {
+  position: absolute;
+  top: 30vh;
+  width: 100%;
+  font-size: 7.5rem;
+  font-weight: 400;
+  line-height: 8.625rem;
+  color: rgb(213, 165, 78);
+  text-align: center;
+}

@@ -1,0 +1,15 @@
+body {
+  height: 200vh;
+}
+
+div {
+  height: 100px;
+}
+
+#div-1 {
+  background-color: red;
+}
+
+#div-2 {
+  background-color: blue;
+}

@@ -1,0 +1,21 @@
+@keyframes moveToRight {
+  from {
+    color: red;
+  }
+  50% {
+    color: blue;
+  }
+  to {
+    color: yellow;
+    transform: translateX(300px);
+  }
+}
+
+button {
+  /* animation-name: moveToRight;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: both; */
+  color: black;
+  transform: skew(15deg, -15deg)
+}

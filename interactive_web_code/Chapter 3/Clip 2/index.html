@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="./index.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="div-1">1</div>
+  <div id="div-2">2</div>
+</body>
+
+<script>
+  window.addEventListener("scroll", () => {
+    document.getElementById("div-1").style.transform = `translateY(${window.scrollY * 2}px)`
+  })
+</script>
+
+</html>
