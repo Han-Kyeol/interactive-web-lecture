@@ -54,10 +54,10 @@ button {
 
 header {
   display: flex;
-  height: 80px;
   padding: 0 80px;
-  align-items: center;
+  height: 80px;
   justify-content: space-between;
+  align-items: center;
   box-shadow: rgb(0 0 0 / 8%) 0 1px 0;
 }
 
@@ -68,11 +68,14 @@ header {
 
 #little-search {
   display: flex;
-  height: 48px;
   padding: 0 8px;
+  justify-content: center;
   align-items: center;
   border: 1px solid #DDDDDD;
   border-radius: 40px;
+  height: 48px;
+  box-sizing: border-box;
+  min-width: 330px;
   box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
   cursor: pointer;
 }
@@ -85,32 +88,36 @@ header {
   cursor: pointer;
 }
 
-#little-search button {
+.little-search_button {
+  display: block;
+  flex-shrink: 0;
   padding: 0 16px;
   white-space: nowrap;
   font-size: 14px;
-  color: #222222;
   font-weight: 600;
+  color: rgb(34, 34, 34);
 }
 
-#little-search button:nth-of-type(3) {
+.little-search_button:nth-of-type(3) {
   color: #717171;
-  font-weight: 400;
 }
 
 .divider {
-  flex: 0 0 1px;
-  height: 24px;
+  display: block;
+  flex-basis: 1px;
+  flex-shrink: 0;
   background-color: #DDDDDD;
+  height: 24px;
 }
 
 #magnifying-glass-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 32px;
-  height: 32px;
   background-color: #FF385C;
+  flex-basis: 32px;
+  flex-shrink: 0;
+  height: 32px;
   border-radius: 50%;
 }
 
@@ -118,21 +125,21 @@ header {
   width: 12px;
 }
 
-#do-fast-campus {
+#header-right-section {
   display: flex;
-  align-items: center;
-  height: 42px;
-  padding: 12px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #222222;
-  border-radius: 22px;
-  cursor: pointer;
-  white-space: nowrap;
-  box-sizing: border-box;
+  gap: 8px;
 }
 
-#do-fast-campus:hover {
+#do-airbnb {
+  padding: 12px;
+  font-size: 14px;
+  color: #222222;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 22px;
+}
+
+#do-airbnb:hover {
   background-color: #f7f7f7;
 }
 
@@ -142,27 +149,12 @@ header {
   align-items: center;
   border: 1px solid #DDDDDD;
   border-radius: 21px;
-  height: 42px;
-  box-sizing: border-box;
-  gap: 10px;
+  gap: 12px;
   cursor: pointer;
 }
 
 #profile-section:hover {
   box-shadow: 0 2px 4px rgba(0,0,0,0.18);
-}
-
-#header-right-section {
-  display: flex;
-  gap: 8px;
-}
-
-#list-icon {
-  width: 16px;
-}
-
-#user-icon {
-  width: 30px;
 }
 #category-bar {
   display: flex;
